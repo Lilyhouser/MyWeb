@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My RecomFilm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header class="nav">
+        <h1 class="web-title">RecomFilm</h1>
+        <div class="web-button-container">
+            <button onclick="showForm()" class="web-button">Add Drama</button>
+            <button onclick="showForm2()" class="web-button">Find Drama</button>
+        </div>
+        
+    </header>
+    <main>
+        <div class="drama-container"></div>
+        <div class="search-drama">
+            <div class="search-drama_searching">
+                <div class="search-drama_searching-img" style="background-image: url(https://w0.peakpx.com/wallpaper/622/86/HD-wallpaper-three-drama-drama-snapseed-three.jpg);"></div>
+                <div class="search-drama_searching-infor">
+                    <h3>Title: Hello World</h3>
+                    <p>Year: 1990</p>
+                    <p>Genre: Dramatic</p>
+                    <p>Rate: 5.0</p>
+                    <p>Acting: Tom</p>
+                    <p>Typing: school, science</p>
+                </div>
+            </div>
+            <div class="search-drama_result">
+                <div class="search-drama_result-item">
+                    <div class="search-drama_result-item-img" style="background-image: url(https://w0.peakpx.com/wallpaper/622/86/HD-wallpaper-three-drama-drama-snapseed-three.jpg);"></div>
+                    <div class="search-drama_result-item-infor">
+                        <h3>Title: Hello World</h3>
+                        <p>Rate: 4.5</p>
+                        <p>Acting: Tom</p>
+                        <p>Typing: hjd, iodiw, idpowd, iid</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <div class="form_input" action></div>
+
+    <script>
+        let drama1 = new Drama('Harry Potter and the Sorcerer Stone', '2001', 'Fantastic', '4.5', 'Daniel Radcliffe, Emma Watson', 'https://th.bing.com/th/id/OIP.2NspUWLHGVl8_2I__9z1oQHaLH?w=999&h=1499&rs=1&pid=ImgDetMain');
+        drama1.addCharacs(['fantastic', 'adventure', 'famlily']);
+        myGraph.addDrama(drama1);
+
+        let drama2 = new Drama('Nobitas Dinosaur', '1980', 'Anime', '4.5', 'Doraemon, Nobita', 'https://m.media-amazon.com/images/M/MV5BZjRmMjIyZjItNWI3Ny00N2VlLWFiYWMtNGVjNDc3NWZjMjYxXkEyXkFqcGdeQXVyMzEwNTkxNA@@._V1_FMjpg_UX1000_.jpg');
+        drama2.addCharacs(['anime', 'psychology', 'adventure']);
+        myGraph.addDrama(drama2);
+
+        let drama3 = new Drama('Nobita and the Birth of Japan', '1989', 'Anime', '4.9', 'Doraemon, Nobita', 'https://th.bing.com/th/id/OIP.snO_jsaxfHsU8UIvhxCn3gHaJ4?rs=1&pid=ImgDetMain');
+        drama3.addCharacs(['fantastic', 'adventure', 'famlily']);
+        myGraph.addDrama(drama3);
+
+        let drama4 = new Drama('Shin Jigen! Crayon Shin-chan the Movie', '2023', 'Anime', '4.3', 'Shinnosuke, Kazama, Nene', 'https://m.media-amazon.com/images/M/MV5BNWY4ZTkzYzYtNDFlNy00ODBhLThlNGQtYzk1N2ExYTVlNzk4XkEyXkFqcGdeQXVyNzkyNTIyMjM@._V1_.jpg');
+        drama4.addCharacs(['school', 'adventure', 'famlily']);
+        myGraph.addDrama(drama4);
+
+        let drama5 = new Drama('Batman', '2022', 'Superhero', '4.5', 'Robert Pattinson, Zoë Kravitz, Jeffrey Wright', 'https://s3.amazonaws.com/comicgeeks/comics/covers/large-7154465.jpg');
+        drama5.addCharacs(['action', 'science', 'psychology']);
+        myGraph.addDrama(drama5);
+
+        let drama6 = new Drama('Frozen', '2013', 'Cartoon', '4.5', 'Kristen Bell, Idina Menzel, Jonathan Groff', 'https://i5.walmartimages.com/asr/2cc186ae-20fa-4af5-9d0c-fb5c8fd4e60e_1.2f4bff57eb6bfdaf649a61be1e883c11.jpeg');
+        drama6.addCharacs(['fantastic', 'romantic', 'famlily']);
+        myGraph.addDrama(drama6);
+
+        let drama7 = new Drama('Puss in Boots', '2022', 'Fairy Tale', '4.5', 'Antonio Banderas, Salma Hayek, Harvey Guillén', 'https://th.bing.com/th/id/OIP.rrIbHqsL8eBrr9oJg9r2jQAAAA?rs=1&pid=ImgDetMain');
+        drama7.addCharacs(['fantastic', 'adventure', 'psychology']);
+        myGraph.addDrama(drama7);
+
+        let drama8 = new Drama('Doctor Strange in the Multiverse of Madness', '2022', 'Marvel', '4.5', 'Benedict Cumberbatch, Elizabeth Olsen', 'https://th.bing.com/th/id/OIP._pqq-mi-hmcXGS9FmzDtzQHaLH?rs=1&pid=ImgDetMain');
+        drama8.addCharacs(['action', 'adventure', 'fantastic']);
+        myGraph.addDrama(drama8);
+
+        let drama9 = new Drama('Detective Conan: The Time Bombed Skyscraper', '1997', 'Anime', '4.9', 'Minami Takayama, Kappei Yamaguchi', 'https://m.media-amazon.com/images/M/MV5BOTFjNjQ4M2MtNTY4Yy00ZjcxLThhODMtZDZiOTM5MmE5OWRiXkEyXkFqcGdeQXVyNjUwMTQ4NjE@._V1_.jpg');
+        drama9.addCharacs(['romantic', 'adventure', 'psychology']);
+        myGraph.addDrama(drama9);
+
+        let drama10 = new Drama('Cinderella', '2015', 'Fairy tale', '4.9', 'Lily James, Cate Blanchett', 'https://th.bing.com/th/id/OIP.M7bz2250QWCyAaag8_5mmAHaH0?w=727&h=767&rs=1&pid=ImgDetMain');
+        drama10.addCharacs(['romantic', 'fantastic', 'family']);
+        myGraph.addDrama(drama10);
+
+        let drama11 = new Drama('Pinocchio', '2022', 'Fairy tale', '4.5', 'Joseph Gordon-Levitt, Tom Hanks', 'https://th.bing.com/th/id/OIP.OSb9Zg2-YHnga1VqZwQBcAHaLH?rs=1&pid=ImgDetMain');
+        drama11.addCharacs(['cartoon', 'fantastic', 'family', 'adventure']);
+        myGraph.addDrama(drama11);
+    </script>
+</body>
+</html>

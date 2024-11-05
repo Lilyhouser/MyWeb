@@ -1,0 +1,190 @@
+:root{
+    --nav-size: 120px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    position: relative;
+}
+main{
+    background-color: rgba(0, 0, 0, 0.9);
+    height: calc(100vh - var(--nav-size));
+    display: flex;
+}
+.nav {
+    height: var(--nav-size);
+    background-color: black;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+.web-title{
+    color: white;
+    font-size: 60px;
+    letter-spacing: 1px;
+    line-height: calc(var(--nav-size) - 18px);
+    margin-left: 40px;
+}
+.web-button-container{
+    display: flex;
+    align-items: center;
+}
+.web-button{
+    padding: 18px 30px;
+    margin-right: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: aliceblue;
+    border: 1px solid rgb(57, 56, 56);
+}
+
+.drama-container{
+    padding: 10px 10px 10px 40px;
+    flex: 3;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 32% 32% 32%;
+}
+
+.drama{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 10px;
+    display: inline-block;
+}
+
+.drama:hover .drama-title{
+    display: block;
+    z-index: 1;
+}
+
+.drama-title{
+    position: absolute;
+    top: calc(100% + 8px);
+    background-color: rgb(46, 45, 45);
+    min-width: 150%;
+    padding: 4px;
+    border-radius: 2px;
+    display: none;
+    color: white;
+}
+
+.search-drama{
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: black;
+    padding: 10px;
+}
+.search-drama_searching{
+    padding-bottom: 10px;
+    position: relative;
+    height: 40%;
+    width: 48%;
+}
+.search-drama_searching-img{
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.search-drama_searching-infor{
+    position: absolute;
+    top: 10%;
+    left: 110%;
+    width: 90%;
+    color: aliceblue;
+
+}
+.search-drama_result{
+    flex: 1;
+    color: aliceblue;
+    overflow-y: scroll;
+}
+
+.search-drama_result-item{
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 10px;
+    display: flex;
+    cursor: pointer;
+}
+
+
+.search-drama_result-item-img{
+    width: 100px;
+    background-image: url(../img/i.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+.form_input2,
+.form_input{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.form_input-container{
+    background-color: white;
+    width: 700px;
+    border-radius: 4px;
+    padding: 20px 40px;
+}
+.form_input-container h2{
+    font-weight: bolder;
+    text-align: center;
+    line-height: 40px;
+}
+.form_input-line{
+    margin: 18px 0;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.form_input-line label{
+    flex: 1;
+}
+.form_input-line input{
+    height: 30px;
+    line-height: 30px;
+    flex: 3;
+    padding: 10px 10px;
+}
+
+.form_input-container .web-button{
+    float: right;
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.sub_form{
+    padding: 30px 0 0 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.sub_form label{
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.check_box{
+    margin-right: 6px;
+}
