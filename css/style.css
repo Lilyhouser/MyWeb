@@ -9,18 +9,23 @@
 body{
     min-height: 100vh;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 main{
-    background-color: rgba(0, 0, 0, 0.9);
     height: calc(100vh - var(--nav-size));
     display: flex;
 }
 .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: var(--nav-size);
     background-color: black;
     display: flex;
     padding: 10px;
     justify-content: space-between;
+    z-index: 1;
 }
 .web-title{
     color: white;
@@ -44,14 +49,16 @@ main{
 }
 
 .drama-container{
+    margin-top: var(--nav-size);
+    margin-right: 35vw;
     padding: 10px 10px 10px 40px;
     flex: 3;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 32% 32% 32%;
 }
 
 .drama{
+    height: 160px;
     position: relative;
     background-position: center;
     background-size: cover;
@@ -63,14 +70,15 @@ main{
 
 .drama:hover .drama-title{
     display: block;
-    z-index: 1;
+    z-index: 2;
 }
 
 .drama-title{
     position: absolute;
-    top: calc(100% + 8px);
+    top: 0%;
+    left: 110%;
     background-color: rgb(46, 45, 45);
-    min-width: 150%;
+    min-width: 200px;
     padding: 4px;
     border-radius: 2px;
     display: none;
@@ -78,12 +86,17 @@ main{
 }
 
 .search-drama{
+    position: fixed;
+    top: var(--nav-size);
+    bottom: 0;
+    right: 0;
     flex: 1.5;
+    width: 35vw;
     display: flex;
     flex-direction: column;
-    height: 100%;
     background-color: black;
     padding: 10px;
+    z-index: 1;
 }
 .search-drama_searching{
     padding-bottom: 10px;
@@ -99,7 +112,7 @@ main{
 }
 .search-drama_searching-infor{
     position: absolute;
-    top: 10%;
+    top: 0;
     left: 110%;
     width: 90%;
     color: aliceblue;
@@ -140,6 +153,7 @@ main{
     align-items: center;
     justify-content: center;
     display: none;
+    z-index: 1;
 }
 .form_input-container{
     background-color: white;

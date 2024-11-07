@@ -312,3 +312,4 @@ function close1(){
     document.querySelector('.form_input').style.display = 'none';
     document.querySelector('.form_input-container').remove();
 }
+
